@@ -1,0 +1,27 @@
+{
+  "name": "reset-touch-grass",
+  "version": "1.0.0",
+  "description": "Re:Set — An open-weight AI experience that helps you use your phone less. Week 1: Touch Grass.",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "hacktoberfest",
+    "touch-grass",
+    "gemma",
+    "open-weight-ai",
+    "digital-wellbeing",
+    "mongodb-atlas",
+    "sentry"
+  ],
+  "author": "Re:Set Team",
+  "license": "Apache-2.0"
+}

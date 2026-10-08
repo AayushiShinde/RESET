@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: reset-touch-grass
+    env: node
+    plan: free
+    buildCommand: npm install && cd server && npm install && cd ../client && npm install && npm run build
+    startCommand: cd server && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: AI_PROVIDER
+        value: gemma
+      - key: GEMMA_MODEL
+        value: google/gemma-2-9b-it
+      - key: GEMMA_API_KEY
+        sync: false
+      - key: SENTRY_DSN
+        sync: false

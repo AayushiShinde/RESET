@@ -1,0 +1,327 @@
+:root {
+  --bg-primary: #faf8f3;
+  --bg-surface: #ffffff;
+  --bg-card: #fdfcf9;
+  --bg-subtle: #f3efe6;
+  --bg-dark: #16291e;
+  
+  --forest-900: #122419;
+  --forest-800: #1a3827;
+  --forest-700: #244c36;
+  --forest-600: #326447;
+  --forest-500: #427e5b;
+  --forest-100: #e7f0e9;
+  --forest-50: #f2f7f3;
+
+  --earth-800: #4a4439;
+  --earth-600: #7a7060;
+  --earth-400: #b0a696;
+  --earth-200: #dcd5c7;
+  --earth-100: #eee8dc;
+
+  --terracotta: #c46849;
+  --terracotta-soft: #faece6;
+
+  --text-main: #1d2520;
+  --text-muted: #5e6b62;
+  --text-soft: #8a968e;
+  --text-on-dark: #f5f7f5;
+
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --shadow-sm: 0 2px 8px rgba(27, 47, 34, 0.04);
+  --shadow-md: 0 8px 24px rgba(27, 47, 34, 0.07);
+  --shadow-lg: 0 16px 40px rgba(27, 47, 34, 0.1);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Texture overlay for gentle organic paper feel */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(26, 56, 39, 0.02) 1px, transparent 0);
+  background-size: 24px 24px;
+  z-index: 99999;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.15;
+  color: var(--forest-900);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.25;
+  color: var(--forest-900);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--forest-800);
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout container */
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--forest-800);
+  color: #ffffff;
+  border-color: var(--forest-800);
+}
+
+.btn-primary:hover {
+  background-color: var(--forest-900);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(26, 56, 39, 0.18);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--forest-800);
+  border-color: var(--earth-200);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--earth-400);
+}
+
+.btn-quiet {
+  background-color: transparent;
+  color: var(--text-muted);
+  border-color: transparent;
+  padding: 0.6rem 1.2rem;
+}
+
+.btn-quiet:hover {
+  color: var(--forest-900);
+  background-color: rgba(26, 56, 39, 0.05);
+}
+
+.btn-large {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.15rem;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--earth-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--earth-400);
+  box-shadow: var(--shadow-md);
+}
+
+.card-quiet {
+  background: var(--bg-subtle);
+  border: 1px dashed var(--earth-300);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+/* Badges & Tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.825rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge-forest {
+  background: var(--forest-100);
+  color: var(--forest-800);
+  border: 1px solid rgba(36, 76, 54, 0.15);
+}
+
+.badge-earth {
+  background: var(--earth-100);
+  color: var(--earth-800);
+  border: 1px solid var(--earth-200);
+}
+
+.badge-terracotta {
+  background: var(--terracotta-soft);
+  color: var(--terracotta);
+}
+
+/* Form inputs */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--forest-900);
+}
+
+.form-input, .form-textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1.5px solid var(--earth-200);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--text-main);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--forest-700);
+  box-shadow: 0 0 0 4px rgba(36, 76, 54, 0.08);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Radio chips */
+.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+
+.chip-btn {
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--earth-200);
+  background: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.chip-btn:hover {
+  border-color: var(--forest-600);
+  background: var(--forest-50);
+}
+
+.chip-btn.active {
+  border-color: var(--forest-800);
+  background: var(--forest-100);
+  color: var(--forest-900);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Minimalist offline screen */
+.offline-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .btn-large {
+    width: 100%;
+  }
+  .card {
+    padding: 1.5rem;
+  }
+}
