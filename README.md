@@ -139,8 +139,8 @@ No surveillance. Just human presence.
 
 1. Clone repository:
    ```bash
-   git clone <repo-url>
-   cd week1_hacktoberfest
+   git clone https://github.com/AayushiShinde/RESET.git
+   cd RESET
    ```
 
 2. Install all dependencies:
