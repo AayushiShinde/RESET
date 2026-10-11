@@ -17,7 +17,7 @@ export class GemmaProvider {
   }
 
   async generateReset({ activity, reason, durationMinutes, preference }) {
-    const prompt = `You are Re:Set, an AI that helps people spend less time on screens and return to real-world offline life.
+    const prompt = `You are RESET, an AI that helps people spend less time on screens and return to real-world offline life.
 Task: Generate a realistic, peaceful offline challenge for a person who wants to return to ${activity}.
 User reason: "${reason}".
 Available duration: ${durationMinutes} minutes.
@@ -30,7 +30,7 @@ CRITICAL RULES:
 
 JSON format:
 {
-  "title": "Your first Re:Set",
+  "title": "Your first RESET",
   "duration_minutes": ${durationMinutes},
   "activity": "${activity}",
   "location_suggestion": "string suggestion for where to sit/be",
@@ -42,7 +42,7 @@ JSON format:
     const rawResponse = await this._callModel(prompt);
     const parsed = this._extractJson(rawResponse);
     return {
-      title: parsed.title || 'Your first Re:Set',
+      title: parsed.title || 'Your first RESET',
       duration_minutes: Number(parsed.duration_minutes) || durationMinutes,
       activity: parsed.activity || activity || 'reading',
       location_suggestion: parsed.location_suggestion || 'Choose somewhere different from your usual room.',
@@ -59,7 +59,7 @@ JSON format:
   }
 
   async analyzeReflection({ bookTitle, reflection, feeling }) {
-    const prompt = `You are Re:Set, an AI analyzing a completed offline reading session.
+    const prompt = `You are RESET, an AI analyzing a completed offline reading session.
 The user just spent time away from their phone in the real world.
 Book read: "${bookTitle || 'Not specified'}".
 User reflection: "${reflection}".

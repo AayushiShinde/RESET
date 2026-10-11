@@ -1,31 +1,40 @@
 import React from 'react';
-import { ArrowRight, BookOpen, Users, Compass, ShieldCheck, Cpu, Smartphone, Heart, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Users, Compass, ShieldCheck, Cpu, Smartphone, Heart, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export function LandingPage({ onNavigate }) {
   return (
     <div className="animate-fade">
       {/* HERO SECTION */}
       <section style={{
-        padding: '5rem 0 4rem',
+        padding: '5.5rem 0 4.5rem',
         textAlign: 'center',
-        background: 'radial-gradient(ellipse at 50% 20%, rgba(36, 76, 54, 0.06) 0%, transparent 70%)'
+        background: 'radial-gradient(ellipse at 50% 25%, rgba(31, 75, 49, 0.08) 0%, rgba(251, 249, 245, 0) 70%)',
+        position: 'relative'
       }}>
         <div className="container-narrow">
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.25rem' }}>
-            <span className="badge badge-forest">
-              🌿 Hacktoberfest 2026 • Week 1: Touch Grass
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+            <span className="badge badge-forest" style={{ padding: '0.45rem 1.1rem', letterSpacing: '0.06em' }}>
+              🌿 Digital Well-Being • Open-Weight AI
             </span>
           </div>
 
-          <h1 style={{ marginBottom: '1rem' }}>
-            Re:Set
+          <h1 style={{
+            fontSize: 'clamp(3rem, 7vw, 5.25rem)',
+            fontWeight: 800,
+            letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+            color: 'var(--forest-900)',
+            marginBottom: '0.5rem',
+            lineHeight: 1
+          }}>
+            RESET
           </h1>
 
           <h2 style={{
-            fontSize: 'clamp(1.5rem, 3vw, 2.25rem)',
+            fontSize: 'clamp(1.6rem, 3.2vw, 2.4rem)',
             color: 'var(--forest-800)',
             fontStyle: 'italic',
-            marginBottom: '1rem',
+            marginBottom: '1.25rem',
             fontWeight: 400
           }}>
             Return to what matters.
@@ -35,34 +44,35 @@ export function LandingPage({ onNavigate }) {
             fontSize: '1.35rem',
             fontWeight: 600,
             color: 'var(--forest-900)',
-            marginBottom: '2rem'
+            marginBottom: '2.5rem',
+            letterSpacing: '-0.01em'
           }}>
-            An AI that helps you use your phone less.
+            An AI experience designed to help you use your phone less.
           </p>
 
           <div style={{
-            background: 'var(--bg-card)',
-            border: '1px solid var(--earth-200)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '2rem',
-            marginBottom: '2.5rem',
-            boxShadow: 'var(--shadow-sm)',
+            background: 'var(--bg-surface)',
+            border: '1px solid rgba(23, 56, 36, 0.1)',
+            borderRadius: 'var(--radius-xl)',
+            padding: '2.5rem 2.25rem',
+            marginBottom: '3rem',
+            boxShadow: 'var(--shadow-md)',
             textAlign: 'left'
           }}>
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-main)', lineHeight: '1.7', marginBottom: '1rem' }}>
-              We have built AI that can write, code, search, summarize, and talk to us all day.
+            <p style={{ fontSize: '1.15rem', color: 'var(--text-main)', lineHeight: '1.7', marginBottom: '1rem' }}>
+              We have built AI that can write, code, search, summarize, and talk to us all day long.
             </p>
             <p style={{
-              fontSize: '1.2rem',
+              fontSize: '1.25rem',
               fontFamily: 'var(--font-serif)',
               color: 'var(--forest-900)',
               fontWeight: 500,
-              lineHeight: '1.5'
+              lineHeight: '1.55'
             }}>
-              Re:Set asks a different question:
+              RESET asks a different question:
               <br />
-              <strong style={{ color: 'var(--forest-800)' }}>
-                What if AI’s job was to help you stop using it?
+              <strong style={{ color: 'var(--forest-800)', display: 'inline-block', marginTop: '0.25rem' }}>
+                What if AI’s highest purpose was to help you stop using it?
               </strong>
             </p>
           </div>
@@ -73,8 +83,8 @@ export function LandingPage({ onNavigate }) {
               className="btn btn-primary btn-large"
               id="cta-start-reset"
             >
-              Start a Re:Set
-              <ArrowRight size={18} />
+              Start a RESET
+              <ArrowRight size={19} />
             </button>
 
             <button
@@ -82,38 +92,38 @@ export function LandingPage({ onNavigate }) {
               className="btn btn-secondary btn-large"
               id="cta-community"
             >
-              <Users size={18} />
-              Join a Community Session
+              <Users size={19} />
+              Join Community Session
             </button>
           </div>
         </div>
       </section>
 
-      {/* SECONDARY MESSAGE / CORE PHILOSOPHY */}
-      <section style={{ padding: '3.5rem 0', borderTop: '1px solid var(--earth-200)' }}>
+      {/* CORE PHILOSOPHY SECTION */}
+      <section style={{ padding: '4rem 0', borderTop: '1px solid var(--earth-200)', background: '#ffffff' }}>
         <div className="container-narrow" style={{ textAlign: 'center' }}>
           <span className="badge badge-earth" style={{ marginBottom: '1rem' }}>
             Product Principle
           </span>
-          <h2 style={{ fontSize: 'clamp(1.6rem, 3vw, 2.25rem)', marginBottom: '1.5rem' }}>
-            The best AI interaction might be the one that ends with you closing the app.
+          <h2 style={{ fontSize: 'clamp(1.75rem, 3.2vw, 2.35rem)', marginBottom: '1.5rem' }}>
+            The best AI interaction is the one that ends with you closing the screen.
           </h2>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: 'var(--text-muted)' }}>
-            Most modern software measures success in daily active minutes, retention streaks, and infinite scroll loops.
-            Re:Set flips this entirely: <strong>the better Re:Set works, the less time you spend inside Re:Set.</strong>
-            Open-weight AI generates a tailored offline starting point, and then gets completely out of your way.
+            Most modern platforms measure success in daily active screen time, retention streaks, and infinite scroll loops.
+            RESET flips this paradigm entirely: <strong>the better RESET works, the less time you spend inside RESET.</strong>
+            Open-weight Gemma generates a tailored offline starting ritual, and then gets completely out of your way.
           </p>
         </div>
       </section>
 
       {/* HOW IT WORKS / 3-STEP FLOW */}
-      <section style={{ padding: '4rem 0', background: 'var(--bg-subtle)' }}>
+      <section style={{ padding: '4.5rem 0', background: 'var(--bg-subtle)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
             <span className="badge badge-forest" style={{ marginBottom: '0.75rem' }}>
               The Minimal Loop
             </span>
-            <h2>How Re:Set works</h2>
+            <h2>How RESET works</h2>
           </div>
 
           <div style={{
@@ -122,71 +132,71 @@ export function LandingPage({ onNavigate }) {
             gap: '2rem'
           }}>
             {/* Step 1 */}
-            <div className="card" style={{ background: '#ffffff' }}>
+            <div className="card">
               <div style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '12px',
+                width: '46px',
+                height: '46px',
+                borderRadius: '14px',
                 background: 'var(--forest-100)',
                 color: 'var(--forest-800)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontWeight: 700,
-                fontSize: '1.1rem',
+                fontSize: '1.15rem',
                 marginBottom: '1.25rem'
               }}>
                 1
               </div>
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>Open-Weight AI Challenge</h3>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>Open-Weight AI Invitation</h3>
               <p style={{ fontSize: '0.98rem' }}>
-                Tell Gemma what you’ve been replacing with screen scrolling and how much time you have. It designs a small, friction-free offline challenge.
+                Tell Gemma what offline activity you miss and how much time you have. It designs a small, tactile, low-friction offline challenge.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="card" style={{ background: '#ffffff', border: '2px solid var(--forest-700)' }}>
+            <div className="card" style={{ border: '2px solid var(--forest-700)', position: 'relative' }}>
               <div style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '12px',
+                width: '46px',
+                height: '46px',
+                borderRadius: '14px',
                 background: 'var(--forest-800)',
                 color: '#ffffff',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontWeight: 700,
-                fontSize: '1.1rem',
+                fontSize: '1.15rem',
                 marginBottom: '1.25rem'
               }}>
                 2
               </div>
-              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>App Shuts Down Mentally</h3>
+              <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>App Mentally Closes</h3>
               <p style={{ fontSize: '0.98rem' }}>
-                Click <em>Begin Re:Set</em>. The UI empties into a quiet screen: <em>"You don't need this app anymore. Put your phone away."</em> No timers ticking, no badges.
+                Click <em>Begin RESET</em>. The screen enters a quiet, distraction-free view: <em>"You don't need this app anymore. Put your phone away."</em> No timers ticking, no badges.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="card" style={{ background: '#ffffff' }}>
+            <div className="card">
               <div style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '12px',
+                width: '46px',
+                height: '46px',
+                borderRadius: '14px',
                 background: 'var(--forest-100)',
                 color: 'var(--forest-800)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontWeight: 700,
-                fontSize: '1.1rem',
+                fontSize: '1.15rem',
                 marginBottom: '1.25rem'
               }}>
                 3
               </div>
               <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>Non-Judgmental Reflection</h3>
               <p style={{ fontSize: '0.98rem' }}>
-                Return when you finish. Record one feeling or phrase that stayed with you. Gemma synthesizes your reflection without streaks, guilt, or XP.
+                Return when you finish. Record one feeling or phrase that stayed with you. Gemma synthesizes your reflection without streaks, shame, or guilt.
               </p>
             </div>
           </div>
@@ -196,13 +206,13 @@ export function LandingPage({ onNavigate }) {
       {/* COMMUNITY SECTION */}
       <section style={{ padding: '5rem 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3.5rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 3.5rem' }}>
             <span className="badge badge-forest" style={{ marginBottom: '0.75rem' }}>
               Real-World Gatherings
             </span>
             <h2 style={{ marginBottom: '1rem' }}>Don't reset alone.</h2>
             <p style={{ fontSize: '1.1rem' }}>
-              Re:Set powers offline gatherings at local independent bookstores, university libraries, cafés, and parks.
+              RESET powers offline gatherings at local independent bookstores, university libraries, cafés, and parks.
               Simple QR check-ins verify that people gathered — without invading their privacy.
             </p>
           </div>
@@ -215,36 +225,36 @@ export function LandingPage({ onNavigate }) {
           }}>
             <div className="card" style={{ textAlign: 'center', cursor: 'pointer' }} onClick={() => onNavigate('community')}>
               <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>📖</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Reading Together</h3>
-              <span className="badge badge-forest" style={{ fontSize: '0.75rem' }}>Active MVP</span>
-              <p style={{ fontSize: '0.88rem', marginTop: '0.75rem' }}>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Reading Together</h3>
+              <span className="badge badge-forest" style={{ fontSize: '0.75rem' }}>Active Live</span>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}>
                 Quiet community reading circles. 30–60 minutes of uninterrupted books.
               </p>
             </div>
 
             <div className="card" style={{ textAlign: 'center', opacity: 0.85 }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>🌿</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Nature Walks</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Nature Walks</h3>
               <span className="badge badge-earth" style={{ fontSize: '0.75rem' }}>Coming Soon</span>
-              <p style={{ fontSize: '0.88rem', marginTop: '0.75rem' }}>
-                Unplugged forest trails, park meetups, and bird-watching without notification dings.
+              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}>
+                Unplugged forest trails, park meetups, and bird-watching without screen distractions.
               </p>
             </div>
 
             <div className="card" style={{ textAlign: 'center', opacity: 0.85 }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>🏃</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Movement & Run</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Movement & Breath</h3>
               <span className="badge badge-earth" style={{ fontSize: '0.75rem' }}>Coming Soon</span>
-              <p style={{ fontSize: '0.88rem', marginTop: '0.75rem' }}>
-                Group movement sessions focused on breath, rhythm, and neighborhood connection.
+              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}>
+                Group movement sessions focused on rhythm, posture, and neighborhood connection.
               </p>
             </div>
 
             <div className="card" style={{ textAlign: 'center', opacity: 0.85 }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>🎨</div>
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Creative Sessions</h3>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem' }}>Creative Sessions</h3>
               <span className="badge badge-earth" style={{ fontSize: '0.75rem' }}>Coming Soon</span>
-              <p style={{ fontSize: '0.88rem', marginTop: '0.75rem' }}>
+              <p style={{ fontSize: '0.9rem', marginTop: '0.75rem' }}>
                 Sketching, analog journaling, tactile painting, and crafts in shared studio spaces.
               </p>
             </div>
@@ -254,9 +264,10 @@ export function LandingPage({ onNavigate }) {
             <button
               onClick={() => onNavigate('community')}
               className="btn btn-primary"
-              style={{ padding: '0.9rem 2rem' }}
+              id="btn-explore-community"
+              style={{ padding: '0.95rem 2.25rem' }}
             >
-              Explore Community Re:Sets
+              Explore Community RESETs
               <ArrowRight size={18} />
             </button>
           </div>
@@ -264,12 +275,12 @@ export function LandingPage({ onNavigate }) {
       </section>
 
       {/* OPEN-WEIGHT AI & ETHICS SECTION */}
-      <section style={{ padding: '4.5rem 0', background: 'var(--bg-card)', borderTop: '1px solid var(--earth-200)' }}>
+      <section style={{ padding: '5rem 0', background: 'var(--bg-card)', borderTop: '1px solid var(--earth-200)' }}>
         <div className="container">
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '3rem',
+            gap: '3.5rem',
             alignItems: 'center'
           }}>
             <div>
@@ -278,24 +289,24 @@ export function LandingPage({ onNavigate }) {
               </span>
               <h2 style={{ marginBottom: '1.25rem' }}>Why Gemma? Why Open Weights?</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '1.25rem' }}>
-                Re:Set deals with deeply personal reflections: your relationship with attention, what you felt while reading, and how you choose to live your finite life.
+                RESET deals with deeply personal reflections: your relationship with attention, what you felt while reading, and how you choose to live your finite life.
               </p>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-                Closed proprietary cloud models force you to surrender your personal journal entries to corporate training pipelines.
-                With <strong>Gemma 2</strong>, weights can run on user hardware or swappable open infrastructure:
+                Closed proprietary cloud models force you to surrender your personal thoughts to corporate training pipelines.
+                With <strong>Gemma 2</strong>, weights can run on private hardware or swappable open infrastructure:
               </p>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.95rem' }}>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <Cpu size={18} style={{ color: 'var(--forest-700)' }} />
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.85rem', fontSize: '0.95rem' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                  <Cpu size={18} style={{ color: 'var(--forest-700)', flexShrink: 0 }} />
                   <span><strong>Inspectable & Swappable:</strong> Replace Gemma with any open model via <code>AIService</code>.</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <ShieldCheck size={18} style={{ color: 'var(--forest-700)' }} />
-                  <span><strong>Zero Surveillance:</strong> Self-trust for solo sessions; QR codes only verify showing up.</span>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                  <ShieldCheck size={18} style={{ color: 'var(--forest-700)', flexShrink: 0 }} />
+                  <span><strong>Zero Surveillance:</strong> Self-trust for solo sessions; QR codes only verify physical presence.</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <Smartphone size={18} style={{ color: 'var(--forest-700)' }} />
-                  <span><strong>Local Offline Capability:</strong> Deterministic engine guarantees function without wifi.</span>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                  <Smartphone size={18} style={{ color: 'var(--forest-700)', flexShrink: 0 }} />
+                  <span><strong>Local Offline Capability:</strong> Deterministic engine guarantees function without network access.</span>
                 </li>
               </ul>
             </div>
@@ -303,16 +314,16 @@ export function LandingPage({ onNavigate }) {
             <div style={{
               background: 'var(--forest-900)',
               color: '#ffffff',
-              padding: '2.5rem',
-              borderRadius: 'var(--radius-lg)',
+              padding: '2.75rem 2.25rem',
+              borderRadius: 'var(--radius-xl)',
               boxShadow: 'var(--shadow-lg)'
             }}>
               <div style={{ fontSize: '0.8rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#a0c4ab', marginBottom: '0.75rem', fontWeight: 700 }}>
-                The Re:Set Contract
+                The RESET Contract
               </div>
               <blockquote style={{
                 fontFamily: 'var(--font-serif)',
-                fontSize: '1.4rem',
+                fontSize: '1.45rem',
                 lineHeight: '1.5',
                 fontStyle: 'italic',
                 marginBottom: '1.5rem',
@@ -320,9 +331,9 @@ export function LandingPage({ onNavigate }) {
               }}>
                 "We don't verify that you read every page. We verify that you showed up."
               </blockquote>
-              <p style={{ fontSize: '0.95rem', color: '#cad8ce', lineHeight: '1.6' }}>
-                A phone being locked does not prove reading. Screen inactivity does not prove reading. Accelerometer data does not prove reading.
-                Re:Set restores human agency.
+              <p style={{ fontSize: '0.975rem', color: '#cad8ce', lineHeight: '1.65' }}>
+                A phone being locked does not prove reading. Screen timers do not prove reading. Accelerometer data does not prove reading.
+                RESET restores human agency.
               </p>
             </div>
           </div>

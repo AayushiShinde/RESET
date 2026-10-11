@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/health', (req, res) => {
   res.json({
     status: 'ok',
-    app: 'Re:Set',
+    app: 'RESET',
     version: '1.0.0',
     tagline: 'Return to what matters. An AI that helps you use your phone less.',
     challenge: 'Hacktoberfest 2026 Open-Source AI Challenge — Week 1: Touch Grass',

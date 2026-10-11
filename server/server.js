@@ -43,7 +43,7 @@ app.get('*', (req, res, next) => {
   }
   res.sendFile(path.join(clientDistPath, 'index.html'), (err) => {
     if (err) {
-      res.status(200).send('Re:Set API running. In development, open Vite dev server on port 5173.');
+      res.status(200).send('RESET API running. In development, open Vite dev server on port 5173.');
     }
   });
 });
@@ -64,7 +64,7 @@ app.use((err, req, res, next) => {
 async function start() {
   await connectDB();
   app.listen(PORT, () => {
-    console.log(`🌿 [Re:Set Server] listening on port ${PORT}`);
+    console.log(`🌿 [RESET Server] listening on port ${PORT}`);
     console.log(`   API Health: http://localhost:${PORT}/api/health`);
   });
 }

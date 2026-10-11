@@ -26,7 +26,7 @@ export function DemoBanner({ onNavigate }) {
           TOUCH GRASS 🌿
         </span>
         <span style={{ color: '#e0ebd9' }}>
-          Hacktoberfest 2026 Open-Source AI Challenge • <strong>Re:Set</strong>
+          Hacktoberfest 2026 Open-Source AI Challenge • <strong>RESET</strong>
         </span>
       </div>
 

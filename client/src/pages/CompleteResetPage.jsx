@@ -62,17 +62,17 @@ export function CompleteResetPage({ minutesCompleted = 30, challenge, onGoToPass
               background: 'var(--forest-50)',
               border: '1px solid var(--forest-100)',
               borderRadius: 'var(--radius-md)',
-              padding: '1rem',
+              padding: '1.1rem',
               marginBottom: '2rem',
               display: 'flex',
               alignItems: 'center',
               gap: '0.75rem',
-              fontSize: '0.88rem',
+              fontSize: '0.9rem',
               color: 'var(--forest-900)'
             }}>
               <ShieldCheck size={20} style={{ color: 'var(--forest-700)', flexShrink: 0 }} />
               <div>
-                <strong>Self-Trust Verification:</strong> Re:Set relies entirely on your honesty.
+                <strong>Self-Trust Verification:</strong> RESET relies entirely on your honesty.
                 No screen timers or surveillance trackers. Returning matters more than consistency.
               </div>
             </div>
@@ -182,7 +182,7 @@ export function CompleteResetPage({ minutesCompleted = 30, challenge, onGoToPass
               Reflection Synthesized
             </span>
             <h1>You noticed something.</h1>
-            <p>
+            <p style={{ fontSize: '1.1rem' }}>
               Processed with open-weight intelligence — zero guilt, zero streaks.
             </p>
           </div>
@@ -258,7 +258,7 @@ export function CompleteResetPage({ minutesCompleted = 30, challenge, onGoToPass
                 id="btn-view-passport"
                 style={{ width: '100%' }}
               >
-                View My Passport
+                View My RESET Passport
                 <ArrowRight size={18} />
               </button>
             </div>

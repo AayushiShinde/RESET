@@ -57,7 +57,7 @@ export function SessionCompletePage({ sessionId, onGoToPassport, onGoToOrganizer
   return (
     <div className="container-narrow animate-fade" style={{ padding: '3.5rem 1.5rem' }}>
       
-      {/* 1. Initial Choice: Did you complete your Re:Set? */}
+      {/* 1. Initial Choice: Did you complete your RESET? */}
       {completedStatus === null && (
         <div style={{ textAlign: 'center' }}>
           <span className="badge badge-forest" style={{ marginBottom: '1rem' }}>
@@ -65,7 +65,7 @@ export function SessionCompletePage({ sessionId, onGoToPassport, onGoToOrganizer
           </span>
           <h1 style={{ marginBottom: '0.5rem' }}>Welcome back.</h1>
           <h3 style={{ marginBottom: '2.5rem', color: 'var(--forest-800)', fontWeight: 400, fontStyle: 'italic' }}>
-            Did you complete your Re:Set?
+            Did you complete your RESET?
           </h3>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '380px', margin: '0 auto 2.5rem' }}>
@@ -75,7 +75,7 @@ export function SessionCompletePage({ sessionId, onGoToPassport, onGoToOrganizer
               id="btn-completed-it"
               style={{ width: '100%', fontSize: '1.15rem' }}
             >
-              🌿 I completed it
+              🌿 I completed my RESET
             </button>
 
             <button
@@ -112,7 +112,7 @@ export function SessionCompletePage({ sessionId, onGoToPassport, onGoToOrganizer
             Not this time is completely okay.
           </h2>
           <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.7', maxWidth: '480px', margin: '0 auto 2rem' }}>
-            You showed up and gave space to the attempt. In Re:Set, there are no broken streaks, no penalty points, and no shame.
+            You showed up and gave space to the attempt. In RESET, there are no broken streaks, no penalty points, and no shame.
             <br />
             <strong>Returning matters more than consistency.</strong>
           </p>
@@ -122,7 +122,7 @@ export function SessionCompletePage({ sessionId, onGoToPassport, onGoToOrganizer
               View Community Stats
             </button>
             <button onClick={onGoToPassport} className="btn btn-primary">
-              View My Passport
+              View RESET Passport
             </button>
           </div>
         </div>
@@ -236,7 +236,7 @@ export function SessionCompletePage({ sessionId, onGoToPassport, onGoToOrganizer
               View Organizer Dashboard
             </button>
             <button onClick={onGoToPassport} className="btn btn-primary">
-              View My Passport
+              View RESET Passport
             </button>
           </div>
         </div>

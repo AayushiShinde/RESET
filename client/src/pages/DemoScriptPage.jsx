@@ -7,7 +7,7 @@ export function DemoScriptPage({ onNavigate, onStartDemoChallenge, onOpenQR }) {
   const demoSteps = [
     {
       step: 1,
-      title: 'Open Re:Set & Frame the Problem',
+      title: 'Open RESET & Frame the Problem',
       script: '“We have built AI that can write, code, search and talk to us. We wanted to build one that helps us stop using AI.”',
       actionLabel: 'Go to Landing Page',
       action: () => onNavigate('landing')
@@ -22,11 +22,11 @@ export function DemoScriptPage({ onNavigate, onStartDemoChallenge, onOpenQR }) {
     {
       step: 3,
       title: 'Gemma Open-Weight Generation',
-      script: 'Gemma 2 crafts “Your first Re:Set”: specific reading spot, phone rule, and tactile reflection anchor.',
+      script: 'Gemma 2 crafts “Your first RESET”: specific reading spot, phone rule, and tactile reflection anchor.',
       actionLabel: 'Preview Challenge with Gemma',
       action: () => {
         onStartDemoChallenge({
-          title: 'Your first Re:Set',
+          title: 'Your first RESET',
           duration_minutes: 30,
           activity: 'reading',
           location_suggestion: 'Choose somewhere different from your usual room.',
@@ -45,19 +45,19 @@ export function DemoScriptPage({ onNavigate, onStartDemoChallenge, onOpenQR }) {
     },
     {
       step: 4,
-      title: 'Begin Re:Set & Close App',
-      script: 'Click “Begin Re:Set”. Screen says: “You don’t need this app anymore. Put your phone away. 🌿”',
+      title: 'Begin RESET & Close App',
+      script: 'Click “Begin RESET”. Screen says: “You don’t need this app anymore. Put your phone away. 🌿”',
       actionLabel: 'View Minimal Offline Screen',
       action: () => onNavigate('offline')
     },
     {
       step: 5,
       title: 'Community Session at Venue',
-      script: 'Show Saturday Re:Set — Reading Together at Community Library. Display START QR code.',
+      script: 'Show Saturday RESET — Reading Together at Community Library. Display START QR code.',
       actionLabel: 'Display Venue QR Codes',
       action: () => onOpenQR({
         _id: 'session_demo_saturday',
-        title: 'Saturday Re:Set — Reading Together',
+        title: 'Saturday RESET — Reading Together',
         venue: 'Community Library',
         durationMinutes: 30
       })
@@ -85,7 +85,7 @@ export function DemoScriptPage({ onNavigate, onStartDemoChallenge, onOpenQR }) {
     },
     {
       step: 9,
-      title: 'Inspect Re:Set Passport',
+      title: 'Inspect RESET Passport',
       script: 'Show: “2h 15m returned to real life”. Reading: 3 sessions, 1h 42m offline. Zero streaks.',
       actionLabel: 'Open User Passport',
       action: () => onNavigate('passport')
@@ -100,16 +100,15 @@ export function DemoScriptPage({ onNavigate, onStartDemoChallenge, onOpenQR }) {
   ];
 
   return (
-    <div className="container animate-fade" style={{ padding: '3.5rem 1.5rem' }}>
+    <div className="container animate-fade" style={{ padding: '3.5rem 1.75rem' }}>
       
       <div style={{ maxWidth: '720px', marginBottom: '2.5rem' }}>
         <span className="badge badge-forest" style={{ marginBottom: '0.75rem' }}>
-          Competition Walkthrough Guide
+          Interactive Guided Tour
         </span>
-        <h1>10-Step Judge Demo Walkthrough</h1>
+        <h1>10-Step Guided Walkthrough</h1>
         <p style={{ fontSize: '1.1rem', marginTop: '0.5rem' }}>
-          This guided script mirrors the official Hacktoberfest Week 1 Touch Grass demonstration.
-          Click any step to instantly verify the user experience.
+          Explore the full RESET ecosystem step-by-step: personal AI rituals, distraction-free screen, venue QR check-ins, and zero-streak passport.
         </p>
       </div>
 

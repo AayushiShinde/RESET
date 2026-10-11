@@ -13,7 +13,7 @@ export async function generateResetPlan({ activity, reason, durationMinutes, pre
   });
   if (!res.ok) {
     const errorData = await res.json().catch(() => ({}));
-    throw new Error(errorData.error || 'Failed to generate Re:Set');
+    throw new Error(errorData.error || 'Failed to generate RESET');
   }
   return res.json();
 }

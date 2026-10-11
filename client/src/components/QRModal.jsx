@@ -19,8 +19,8 @@ export function QRModal({ session, onClose, onSimulateScan }) {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: 'rgba(18, 36, 25, 0.75)',
-      backdropFilter: 'blur(6px)',
+      backgroundColor: 'rgba(16, 38, 25, 0.75)',
+      backdropFilter: 'blur(8px)',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -31,10 +31,11 @@ export function QRModal({ session, onClose, onSimulateScan }) {
         maxWidth: '460px',
         width: '100%',
         background: '#ffffff',
-        padding: '2rem',
+        padding: '2.25rem 2rem',
         position: 'relative',
         textAlign: 'center',
-        border: '2px solid var(--forest-800)'
+        border: '2px solid var(--forest-800)',
+        boxShadow: 'var(--shadow-xl)'
       }}>
         {/* Close Button */}
         <button
@@ -60,7 +61,7 @@ export function QRModal({ session, onClose, onSimulateScan }) {
         <h3 style={{ fontSize: '1.35rem', marginBottom: '0.25rem' }}>
           {session.title}
         </h3>
-        <p style={{ fontSize: '0.9rem', marginBottom: '1.25rem' }}>
+        <p style={{ fontSize: '0.9rem', marginBottom: '1.25rem', color: 'var(--earth-600)' }}>
           📍 {session.venue} • ⏱ {session.durationMinutes} minutes
         </p>
 
@@ -68,7 +69,7 @@ export function QRModal({ session, onClose, onSimulateScan }) {
         <div style={{
           display: 'flex',
           background: 'var(--bg-subtle)',
-          padding: '0.3rem',
+          padding: '0.35rem',
           borderRadius: 'var(--radius-full)',
           marginBottom: '1.5rem'
         }}>
@@ -76,37 +77,37 @@ export function QRModal({ session, onClose, onSimulateScan }) {
             onClick={() => setActiveTab('start')}
             style={{
               flex: 1,
-              padding: '0.55rem',
+              padding: '0.6rem',
               borderRadius: 'var(--radius-full)',
               border: 'none',
               background: activeTab === 'start' ? '#ffffff' : 'transparent',
               color: activeTab === 'start' ? 'var(--forest-900)' : 'var(--text-muted)',
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: '0.85rem',
               cursor: 'pointer',
-              boxShadow: activeTab === 'start' ? 'var(--shadow-sm)' : 'none',
+              boxShadow: activeTab === 'start' ? 'var(--shadow-xs)' : 'none',
               transition: 'all 0.15s ease'
             }}
           >
-            START RE:SET QR
+            START RESET QR
           </button>
           <button
             onClick={() => setActiveTab('complete')}
             style={{
               flex: 1,
-              padding: '0.55rem',
+              padding: '0.6rem',
               borderRadius: 'var(--radius-full)',
               border: 'none',
               background: activeTab === 'complete' ? '#ffffff' : 'transparent',
               color: activeTab === 'complete' ? 'var(--forest-900)' : 'var(--text-muted)',
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: '0.85rem',
               cursor: 'pointer',
-              boxShadow: activeTab === 'complete' ? 'var(--shadow-sm)' : 'none',
+              boxShadow: activeTab === 'complete' ? 'var(--shadow-xs)' : 'none',
               transition: 'all 0.15s ease'
             }}
           >
-            COMPLETE RE:SET QR
+            COMPLETE RESET QR
           </button>
         </div>
 
@@ -115,17 +116,17 @@ export function QRModal({ session, onClose, onSimulateScan }) {
           padding: '1.5rem',
           background: '#ffffff',
           borderRadius: 'var(--radius-md)',
-          border: '2px dashed var(--earth-300)',
+          border: '1.5px solid var(--earth-200)',
           display: 'inline-block',
           marginBottom: '1rem',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
+          boxShadow: 'var(--shadow-sm)'
         }}>
           <QRCodeSVG
             value={currentUrl}
             size={210}
             level="H"
             includeMargin={true}
-            fgColor="#122419"
+            fgColor="#102619"
           />
         </div>
 
@@ -133,26 +134,16 @@ export function QRModal({ session, onClose, onSimulateScan }) {
           Encoded Route: <code>{activeTab === 'start' ? `/session/${session._id}/start` : `/session/${session._id}/complete`}</code>
         </div>
 
-        {/* Demo Simulation Action */}
+        {/* Action Button */}
         <div style={{
           background: 'var(--forest-50)',
           border: '1px solid var(--forest-100)',
           borderRadius: 'var(--radius-md)',
-          padding: '1rem',
+          padding: '1.1rem',
           marginBottom: '1rem'
         }}>
-          <div style={{
-            fontSize: '0.78rem',
-            color: 'var(--forest-700)',
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            letterSpacing: '0.04em',
-            marginBottom: '0.35rem'
-          }}>
-            Judges & Testing Tool
-          </div>
-          <p style={{ fontSize: '0.825rem', color: 'var(--forest-900)', marginBottom: '0.75rem' }}>
-            Testing on a single laptop? Experience the exact participant phone flow:
+          <p style={{ fontSize: '0.85rem', color: 'var(--forest-900)', marginBottom: '0.75rem', fontWeight: 500 }}>
+            Experience the participant check-in flow directly:
           </p>
           <button
             onClick={() => onSimulateScan(session._id, activeTab)}
@@ -160,11 +151,8 @@ export function QRModal({ session, onClose, onSimulateScan }) {
             style={{ width: '100%', fontSize: '0.95rem', padding: '0.75rem' }}
           >
             <Play size={16} />
-            Simulate {activeTab === 'start' ? 'Start' : 'Complete'} Scan
+            Open {activeTab === 'start' ? 'Start' : 'Complete'} Check-in
           </button>
-          <span style={{ display: 'block', marginTop: '0.35rem', fontSize: '0.75rem', color: 'var(--text-soft)' }}>
-            Clearly labeled: Demo simulation
-          </span>
         </div>
 
         <div style={{ fontSize: '0.8rem', color: 'var(--earth-600)' }}>

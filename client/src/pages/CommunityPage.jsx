@@ -53,7 +53,7 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
   };
 
   return (
-    <div className="container animate-fade" style={{ padding: '3.5rem 1.5rem' }}>
+    <div className="container animate-fade" style={{ padding: '3.5rem 1.75rem' }}>
       
       {/* Header */}
       <div style={{
@@ -70,7 +70,7 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
           <span className="badge badge-forest" style={{ marginBottom: '0.75rem' }}>
             Real-World Gatherings
           </span>
-          <h1>Community Re:Sets</h1>
+          <h1>Community RESETs</h1>
           <p style={{ fontSize: '1.15rem', marginTop: '0.5rem' }}>
             Local bookstores, university libraries, cafés, and park benches hosting shared offline reading hours.
           </p>
@@ -82,28 +82,29 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
           id="btn-create-community"
         >
           <Plus size={18} />
-          Host a Community Re:Set
+          Host a Community RESET
         </button>
       </div>
 
       {/* Philosophy Banner */}
       <div style={{
-        background: 'var(--bg-card)',
+        background: 'var(--bg-surface)',
         border: '1px solid var(--earth-200)',
         borderRadius: 'var(--radius-lg)',
-        padding: '1.75rem 2rem',
+        padding: '2rem 2.25rem',
         marginBottom: '3rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-        gap: '1.5rem'
+        gap: '1.5rem',
+        boxShadow: 'var(--shadow-sm)'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
           <div style={{
-            width: '48px',
-            height: '48px',
-            borderRadius: '12px',
+            width: '50px',
+            height: '50px',
+            borderRadius: '14px',
             background: 'var(--forest-100)',
             color: 'var(--forest-800)',
             display: 'flex',
@@ -114,10 +115,10 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
             📍
           </div>
           <div>
-            <h3 style={{ fontSize: '1.15rem', color: 'var(--forest-900)', marginBottom: '0.2rem' }}>
+            <h3 style={{ fontSize: '1.2rem', color: 'var(--forest-900)', marginBottom: '0.25rem' }}>
               "We don't verify that you read every page. We verify that you showed up."
             </h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--earth-600)', margin: 0 }}>
+            <p style={{ fontSize: '0.925rem', color: 'var(--earth-600)', margin: 0 }}>
               Physical QR codes allow organizers to verify community attendance with zero device surveillance.
             </p>
           </div>
@@ -126,9 +127,9 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
         <button
           onClick={() => onNavigate('organizer')}
           className="btn btn-secondary"
-          style={{ fontSize: '0.9rem', padding: '0.6rem 1.2rem' }}
+          style={{ fontSize: '0.9rem', padding: '0.65rem 1.25rem' }}
         >
-          Open Organizer Live View →
+          Open Organizer View →
         </button>
       </div>
 
@@ -150,7 +151,7 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
               </span>
             </div>
 
-            <h3 style={{ fontSize: '1.3rem', marginBottom: '0.75rem', color: 'var(--forest-900)' }}>
+            <h3 style={{ fontSize: '1.35rem', marginBottom: '0.75rem', color: 'var(--forest-900)' }}>
               {s.title}
             </h3>
 
@@ -195,19 +196,19 @@ export function CommunityPage({ onNavigate, onOpenQR }) {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(18, 36, 25, 0.75)',
-          backdropFilter: 'blur(6px)',
+          backgroundColor: 'rgba(16, 38, 25, 0.75)',
+          backdropFilter: 'blur(8px)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           padding: '1.5rem',
           zIndex: 2000
         }}>
-          <div className="card" style={{ maxWidth: '480px', width: '100%', background: '#ffffff', padding: '2rem' }}>
-            <h3 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--forest-900)' }}>
-              Host a Community Re:Set
+          <div className="card" style={{ maxWidth: '480px', width: '100%', background: '#ffffff', padding: '2.25rem' }}>
+            <h3 style={{ fontSize: '1.45rem', marginBottom: '0.5rem', color: 'var(--forest-900)' }}>
+              Host a Community RESET
             </h3>
-            <p style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+            <p style={{ fontSize: '0.925rem', marginBottom: '1.5rem' }}>
               Create a venue session for your local bookstore, café, library, or meetup.
             </p>
 

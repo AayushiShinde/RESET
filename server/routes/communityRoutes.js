@@ -73,7 +73,7 @@ router.post('/sessions/:sessionId/start', async (req, res) => {
         session,
         attendance,
         updatedStats,
-        message: "You're here. Re:Set starts now. Your phone is no longer needed.",
+        message: "You're here. RESET starts now. Your phone is no longer needed.",
         isSimulated
       });
     } catch (err) {

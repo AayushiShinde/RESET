@@ -30,7 +30,7 @@ export class FallbackProvider {
     }
 
     return {
-      title: 'Your first Re:Set',
+      title: 'Your first RESET',
       duration_minutes: mins,
       activity: activity || 'reading',
       location_suggestion: locationSuggestion,

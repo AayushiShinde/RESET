@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchPassport } from '../api.js';
-import { BookOpen, Clock, Users, MessageSquare, ShieldCheck, HeartHandshake, Compass } from 'lucide-react';
+import { BookOpen, Clock, Users, MessageSquare, ShieldCheck, HeartHandshake, Compass, ArrowRight } from 'lucide-react';
 
 export function PassportPage({ onStartNewReset }) {
   const [data, setData] = useState(null);
@@ -34,14 +34,14 @@ export function PassportPage({ onStartNewReset }) {
   };
 
   return (
-    <div className="container animate-fade" style={{ padding: '3.5rem 1.5rem' }}>
+    <div className="container animate-fade" style={{ padding: '3.5rem 1.75rem' }}>
       
       {/* Header */}
       <div style={{ maxWidth: '680px', marginBottom: '3rem' }}>
         <span className="badge badge-forest" style={{ marginBottom: '0.75rem' }}>
           Personal Offline Journal
         </span>
-        <h1>My Re:Set Passport</h1>
+        <h1>My RESET Passport</h1>
         <p style={{ fontSize: '1.15rem', marginTop: '0.5rem' }}>
           A record of hours reclaimed from screens. No streaks, no arbitrary points, no gamified guilt.
         </p>
@@ -52,7 +52,7 @@ export function PassportPage({ onStartNewReset }) {
         background: 'var(--forest-900)',
         color: '#ffffff',
         padding: '3rem 2.5rem',
-        borderRadius: 'var(--radius-lg)',
+        borderRadius: 'var(--radius-xl)',
         marginBottom: '3rem',
         boxShadow: 'var(--shadow-lg)'
       }}>
@@ -98,7 +98,7 @@ export function PassportPage({ onStartNewReset }) {
           color: '#cad8ce'
         }}>
           <div>
-            <strong>Metric Philosophy:</strong> Re:Set measures hours spent outside this app, not minutes trapped within it.
+            <strong>Metric Philosophy:</strong> RESET measures hours spent outside this app, not minutes trapped within it.
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@ export function PassportPage({ onStartNewReset }) {
         </div>
       </div>
 
-      {/* WHAT YOU'VE BEEN RETURNING TO (AND COMING SOON) */}
+      {/* WHAT YOU'VE BEEN RETURNING TO */}
       <div style={{ marginBottom: '4rem' }}>
         <h3 style={{ fontSize: '1.4rem', color: 'var(--forest-900)', marginBottom: '1.25rem' }}>
           What you've been returning to
@@ -215,14 +215,14 @@ export function PassportPage({ onStartNewReset }) {
       <div style={{
         background: 'var(--bg-subtle)',
         border: '1px dashed var(--earth-300)',
-        borderRadius: 'var(--radius-lg)',
-        padding: '2rem',
+        borderRadius: 'var(--radius-xl)',
+        padding: '2.5rem 2rem',
         textAlign: 'center'
       }}>
-        <h4 style={{ fontSize: '1.1rem', color: 'var(--forest-900)', marginBottom: '0.5rem' }}>
-          Why Re:Set Rejects Streaks
+        <h4 style={{ fontSize: '1.25rem', color: 'var(--forest-900)', marginBottom: '0.5rem' }}>
+          Why RESET Rejects Streaks
         </h4>
-        <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', maxWidth: '640px', margin: '0 auto 1.5rem' }}>
+        <p style={{ fontSize: '1rem', color: 'var(--text-muted)', maxWidth: '640px', margin: '0 auto 1.75rem', lineHeight: '1.7' }}>
           Streak apps weaponize loss aversion, turning genuine human interests into frantic digital chores.
           If you go a week without reading, your passport does not reset to zero. You do not lose status.
           <br />
@@ -232,8 +232,11 @@ export function PassportPage({ onStartNewReset }) {
         <button
           onClick={onStartNewReset}
           className="btn btn-primary"
+          id="btn-start-another-reset"
+          style={{ padding: '0.9rem 2rem' }}
         >
-          Start another Re:Set
+          Start another RESET
+          <ArrowRight size={18} />
         </button>
       </div>
 

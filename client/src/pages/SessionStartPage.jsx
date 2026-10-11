@@ -25,8 +25,8 @@ export function SessionStartPage({ sessionId, onPutPhoneAway }) {
   }, [sessionId]);
 
   return (
-    <div className="offline-view animate-fade" style={{ background: '#faf8f3' }}>
-      <div style={{ maxWidth: '560px', width: '100%', margin: '0 auto', textAlign: 'center' }}>
+    <div className="offline-view animate-fade" style={{ background: '#fcfbf7' }}>
+      <div style={{ maxWidth: '580px', width: '100%', margin: '0 auto', textAlign: 'center' }}>
         
         <span className="badge badge-forest" style={{ marginBottom: '1.25rem' }}>
           Physical Venue QR Verified
@@ -36,7 +36,7 @@ export function SessionStartPage({ sessionId, onPutPhoneAway }) {
           fontSize: 'clamp(2.5rem, 6vw, 3.8rem)',
           color: 'var(--forest-900)',
           marginBottom: '0.5rem',
-          fontWeight: 600
+          fontWeight: 700
         }}>
           You're here.
         </h1>
@@ -48,7 +48,7 @@ export function SessionStartPage({ sessionId, onPutPhoneAway }) {
           fontStyle: 'italic',
           marginBottom: '2rem'
         }}>
-          Re:Set starts now.
+          RESET starts now.
         </h3>
 
         <div className="card" style={{
@@ -56,12 +56,13 @@ export function SessionStartPage({ sessionId, onPutPhoneAway }) {
           border: '2px solid var(--forest-800)',
           padding: '2.5rem 2rem',
           marginBottom: '2.5rem',
-          textAlign: 'center'
+          textAlign: 'center',
+          boxShadow: 'var(--shadow-md)'
         }}>
           <div style={{ fontSize: '3rem', marginBottom: '0.75rem' }}>📖</div>
           
           <h2 style={{ fontSize: '1.5rem', color: 'var(--forest-900)', marginBottom: '0.5rem' }}>
-            {session?.title || 'Saturday Re:Set — Reading Together'}
+            {session?.title || 'Saturday RESET — Reading Together'}
           </h2>
 
           <p style={{ fontSize: '1rem', color: 'var(--earth-600)', marginBottom: '1.5rem' }}>
@@ -72,7 +73,8 @@ export function SessionStartPage({ sessionId, onPutPhoneAway }) {
             background: 'var(--forest-50)',
             padding: '1.25rem',
             borderRadius: 'var(--radius-md)',
-            marginBottom: '1.5rem'
+            marginBottom: '1.5rem',
+            border: '1px solid var(--forest-100)'
           }}>
             <p style={{
               fontSize: '1.3rem',
@@ -97,7 +99,7 @@ export function SessionStartPage({ sessionId, onPutPhoneAway }) {
           style={{ width: '100%', maxWidth: '360px', padding: '1.1rem' }}
         >
           <PhoneOff size={20} />
-          Put phone away
+          Begin RESET — Put phone away
         </button>
       </div>
     </div>

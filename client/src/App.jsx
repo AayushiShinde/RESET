@@ -127,9 +127,6 @@ export default function App() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Top Demo Banner for Judges */}
-      <DemoBanner onNavigate={navigateTo} />
-
       {/* Main Navigation */}
       <Navbar currentPage={currentPage} onNavigate={navigateTo} />
 

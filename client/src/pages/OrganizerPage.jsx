@@ -9,7 +9,6 @@ export function OrganizerPage({ onOpenQR }) {
   const [sessionData, setSessionData] = useState(null);
   const [reflections, setReflections] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [simulatedMode, setSimulatedMode] = useState(false);
 
   useEffect(() => {
     async function init() {
@@ -39,13 +38,8 @@ export function OrganizerPage({ onOpenQR }) {
     }
   };
 
-  const handleSessionChange = async (id) => {
-    setSelectedSessionId(id);
-    await loadSessionStats(id);
-  };
-
   const currentSession = sessionData?.session || {
-    title: 'Saturday Re:Set — Reading Together',
+    title: 'Saturday RESET — Reading Together',
     venue: 'Community Library',
     durationMinutes: 30
   };
@@ -58,7 +52,7 @@ export function OrganizerPage({ onOpenQR }) {
   };
 
   return (
-    <div className="container animate-fade" style={{ padding: '3.5rem 1.5rem' }}>
+    <div className="container animate-fade" style={{ padding: '3.5rem 1.75rem' }}>
       
       {/* Header */}
       <div style={{
@@ -75,7 +69,7 @@ export function OrganizerPage({ onOpenQR }) {
           <span className="badge badge-forest" style={{ marginBottom: '0.75rem' }}>
             Organizer View
           </span>
-          <h1>Community Re:Set</h1>
+          <h1>Community RESET</h1>
           <h2 style={{ fontSize: '1.75rem', color: 'var(--forest-800)', marginTop: '0.25rem' }}>
             {currentSession.title}
           </h2>
@@ -106,7 +100,7 @@ export function OrganizerPage({ onOpenQR }) {
         background: '#ffffff',
         border: '1.5px solid var(--forest-800)',
         borderRadius: 'var(--radius-lg)',
-        padding: '1.75rem 2rem',
+        padding: '1.85rem 2rem',
         marginBottom: '3rem',
         boxShadow: 'var(--shadow-sm)'
       }}>
@@ -117,10 +111,10 @@ export function OrganizerPage({ onOpenQR }) {
           </h3>
         </div>
         <p style={{ fontSize: '1.05rem', color: 'var(--forest-800)', fontStyle: 'italic', marginBottom: '0.5rem' }}>
-          "We do not claim that 24 people definitely read every page. Instead, 24 participants completed the Re:Set session."
+          "We do not claim that 24 people definitely read every page. Instead, 24 participants completed the RESET session."
         </p>
-        <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
-          Re:Set records physical arrival and departure check-ins. We treat adults with dignity rather than treating personal attention as corporate telemetry.
+        <p style={{ fontSize: '0.925rem', color: 'var(--text-muted)', margin: 0 }}>
+          RESET records physical arrival and departure check-ins. We treat adults with dignity rather than treating personal attention as corporate telemetry.
         </p>
       </div>
 
@@ -240,7 +234,7 @@ export function OrganizerPage({ onOpenQR }) {
             <div
               key={r._id}
               className="card"
-              style={{ background: '#ffffff', padding: '1.25rem 1.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}
+              style={{ background: '#ffffff', padding: '1.35rem 1.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}
             >
               <div style={{ maxWidth: '650px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>

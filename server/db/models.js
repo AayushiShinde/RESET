@@ -66,7 +66,7 @@ const inMemoryStore = {
       reason: 'I used to read all the time, but now whenever I have free time I just scroll.',
       durationMinutes: 30,
       challenge: {
-        title: 'Your first Re:Set',
+        title: 'Your first RESET',
         duration_minutes: 30,
         activity: 'reading',
         location_suggestion: 'Choose somewhere different from your usual room.',
@@ -80,7 +80,7 @@ const inMemoryStore = {
   communitySessions: [
     {
       _id: 'session_demo_saturday',
-      title: 'Saturday Re:Set — Reading Together',
+      title: 'Saturday RESET — Reading Together',
       activity: 'reading',
       venue: 'Community Library',
       date: 'Saturday Morning',
@@ -194,7 +194,7 @@ export const dbRepo = {
     const id = `session_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`;
     const doc = {
       _id: id,
-      title: sessionData.title || 'Community Re:Set Reading Session',
+      title: sessionData.title || 'Community RESET Reading Session',
       activity: sessionData.activity || 'reading',
       venue: sessionData.venue || 'Local Community Space',
       date: sessionData.date || new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' }),
